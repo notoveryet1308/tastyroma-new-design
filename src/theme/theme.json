@@ -1,0 +1,13 @@
+{
+  "primaryColor": "#E21837",
+  "white": "#fff",
+  "black": "#000",
+  "highlightFont": "'Poiret One', cursive",
+  "primaryFont": "'Lato', sans-serif",
+  "secondaryFont": "'Poppins', sans-serif",
+  "addBtnColor": "#D4AF29",
+  "addCommentBtnColor": "#B4C1E3",
+  "filterBtnFocused": "#2824D8",
+  "filterBtnUnfocused": "#5653DF",
+  "backBtnBg":"#1C1B1B"
+}
