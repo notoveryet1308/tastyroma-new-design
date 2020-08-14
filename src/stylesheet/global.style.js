@@ -1,7 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
 
-import theme from './../theme/theme.json';
-
 export const GlobalStyle = createGlobalStyle`
   *{
     padding: 0;
@@ -10,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   html{
     font-size: 0.625rem;
-    font-family: ${theme.primaryFont};
+    font-family: ${props => props.theme.primaryFont};
+    background: ${props => props.theme.black};
   }
 `

@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
 import { GlobalStyle } from './stylesheet/global.style';
+import {GlobalFonts} from './fonts/font';
 import theme from './theme/theme.json';
 
 ReactDOM.render(
@@ -12,6 +13,7 @@ ReactDOM.render(
       <ThemeProvider theme={theme}>
         <App />
         <GlobalStyle />
+        <GlobalFonts />
       </ThemeProvider>
 
     </BrowserRouter>

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const LogoWrapper = styled.div `
   position: relative;
-  width: 14rem;
+  width: 16rem;
   height: 4rem;
   padding-bottom: .5rem;
   cursor:pointer;
@@ -12,7 +12,7 @@ export const LogoWrapper = styled.div `
   background:${props => props.theme.primaryColor};
   
   @media (max-width:768px){
-    width: 11rem;
+    width: 12rem;
     height: 3rem;
   }
   
@@ -20,11 +20,11 @@ export const LogoWrapper = styled.div `
 export const LogoText = styled.h1 `
   position: relative;   
   display: inline-block;
-  font-family:${props => props.theme.primaryFont};
-  font-size: 2rem;
+  font-family:'Logo Font';
+  font-size: 2.4rem;
   color:${props => props.theme.white};
   margin: 1.3rem 0 0 .8rem;
-  /* letter-spacing: .1rem; */
+  letter-spacing: .2rem;
   -webkit-font-smoothing: always;
   -moz-osx-font-smoothing:always;
   @media (max-width: 768px){

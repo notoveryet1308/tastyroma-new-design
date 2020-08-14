@@ -9,13 +9,17 @@ export const HighlightWrapper = styled.div `
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  background: rgba(255,255,255, .9);
+  padding: 1rem;
+
 `
 
 export const HighlightText = styled.p `
   position: relative;
   font-size: 3rem;
   font-family: ${props => props.theme.highlightFont};
+  text-align: center;
   @media (max-width: 768px){
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 `
