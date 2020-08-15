@@ -53,7 +53,9 @@ function Index() {
       <ContentBox>
         <Content>
           <TextInfo>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos possimus suscipit id alias aliquid consequatur quam quo repudiandae sed ea saepe architecto magni rem consequuntur, ducimus libero corporis pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui atque deserunt odit facere sit voluptates, doloribus quasi sint debitis praesentium, voluptatibus minima et accusamus expedita laborum assumenda error nulla architecto!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos possimus suscipit id alias aliquid consequatur quam quo repudiandae sed ea saepe architecto magni rem consequuntur, ducimus libero corporis pariatur.
+            <br></br><br></br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui atque deserunt odit facere sit voluptates.
           </TextInfo>
           <Imagebox>
             <Image/>
