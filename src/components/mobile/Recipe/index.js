@@ -33,7 +33,7 @@ function style() {
   return (
     <RecipeWrapper>
       <HighlightLabel
-        text="RECIPE'S FOR YOU"
+        text="RECIPE FOR YOU"
         width="100%"
         height="4rem"
         radius=".3rem"

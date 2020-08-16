@@ -7,7 +7,7 @@ const RecipeCardWrapper = styled.div`
   justify-content: space-between;
   width: 35rem;
   height: 20rem;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   background: #fff;
   border-radius: 1rem;
   margin: 1rem;
@@ -31,14 +31,15 @@ const RecipeDetail = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  padding: 1.5rem;
   @media (max-width: 480px){
     width: 100%;
-    padding: 1.5rem;
+    
   }
 `
 const RecipeName = styled.h1`
   font-family: ${props => props.theme.highlightFont};
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing:.1rem;
   -webkit-text-stroke: 1px black;
 `
@@ -76,7 +77,7 @@ const DownloadLink = styled.a`
 const Image = styled.img`
   width: 45%;
   height: 100%;
-  border-radius: 1rem;
+  border-radius: 0 1rem 1rem 0;
   @media (max-width: 480px){
     width: 100%;
     height: 22rem;
@@ -96,7 +97,7 @@ function Index({ name, downloadlink, delatil, img, left }) {
           <DownloadLink href={downloadlink} download> Download</DownloadLink>
         </RecipeDownload>
       </RecipeDetail>
-      <Image src={img} alt="recipe-img" />
+      <Image src={img} alt="recipe-img" width="100" height="100" loading="lazy" />
     </RecipeCardWrapper>
   )
 }

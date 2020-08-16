@@ -44,7 +44,7 @@ const Content = styled.div`
 function Index() {
   return (
     <RecipeWrapper>
-      <MainLabel labelname="Recipe's for you"/>
+      <MainLabel labelname="Recipe for you"/>
       <ContentBox>
         <Content>
            <RecipeCard 

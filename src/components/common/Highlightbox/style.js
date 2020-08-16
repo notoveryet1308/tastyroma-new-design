@@ -18,6 +18,7 @@ export const HighlightText = styled.p `
   position: relative;
   font-size: 3rem;
   font-family: ${props => props.theme.highlightFont};
+  -webkit-text-stroke: .1rem #000;
   text-align: center;
   @media (max-width: 768px){
     font-size: 2rem;
