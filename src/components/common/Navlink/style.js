@@ -3,8 +3,10 @@ import styled from 'styled-components';
 
 export const Linkwrapper = styled.div`
   display: inline-block;
-  padding: .5rem 1rem;
-  text-align: center;
+  /* padding: .5rem 1rem; */
+  /* text-align: center; */
+  padding: 0 1rem;
+  
 `
 
 export const StyledLink = styled(Link)`
@@ -14,4 +16,5 @@ export const StyledLink = styled(Link)`
    font-family: ${props => props.theme.secondaryFont};
    color: ${props => props.theme.white};
    text-transform: uppercase;
+   font-weight: ${props => props.fontWeight};
 `
