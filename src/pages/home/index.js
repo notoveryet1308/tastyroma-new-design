@@ -7,6 +7,8 @@ import WeServe from '../../components/WeServe';
 import MobWeServe from '../../components/mobile/WeServe';
 import MobChefSpecial from '../../components/mobile/ChefSpecial';
 import ChefSpecial from '../../components/ChefsSpecial';
+import MobRecipe from '../../components/mobile/Recipe';
+import Recipe from '../../components/Recipe';
 
 function Index() {
   return (
@@ -18,6 +20,8 @@ function Index() {
       <WeServe />
       <MobChefSpecial />
       <ChefSpecial />
+      <MobRecipe/>
+      <Recipe />
     </div>
   )
 }

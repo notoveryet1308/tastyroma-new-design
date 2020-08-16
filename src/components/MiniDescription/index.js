@@ -27,7 +27,8 @@ const Content = styled.div`
 `
 const TextInfo = styled.p`
   width: 20%;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-family:  'Felipa', cursive;
   color: #fff;
   margin: 0 5rem;
   line-height: 1.3;

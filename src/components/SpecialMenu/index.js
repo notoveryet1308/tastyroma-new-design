@@ -9,31 +9,33 @@ const SpecialMenuWrapper = styled.div`
   background-size: cover;
   background-position: center;
   margin: 1rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   cursor:pointer;
 
   @media (max-width: 768px){
     width: 27rem;
     height: 30rem;
+    margin: 0;
+    margin-bottom: 1.5rem;
   }
   @media (max-width: 742px){
     width: 25rem;
     height: 30rem;
   }
   @media (max-width: 693px){
-    width: 22rem;
+    width: 24rem;
     height: 28rem;
   }
    @media (max-width: 614px){
-    width: 20rem;
+    width: 22rem;
     height: 25rem;
   }
   @media (max-width: 567px){
-    width: 18rem;
+    width: 20rem;
     height: 22rem;
   }
   @media (max-width: 567px){
-    width: 17rem;
+    width: 18rem;
     height: 20rem;
   }
 
@@ -54,7 +56,8 @@ const Namebox = styled.div`
   align-items:center;
   background: rgba(197, 49, 49, 0.6);
   box-shadow: inset 0px -30px 20px -6px rgba(223, 32, 32, 0.9);
-  border-radius:0 0 2rem 2rem;
+  border-radius:0 0 1rem 1rem;
+  
   
 `
 const Name = styled.span`
@@ -75,8 +78,9 @@ function Index({ img, name, to, history }) {
       onClick={() => history.push(to)}
     >
       <Namebox>
-        <Name>{name}</Name>
+       <Name>{name}</Name>
       </Namebox>
+       
     </SpecialMenuWrapper>
   )
 }

@@ -2,13 +2,12 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
-import plantbased from '../../img/menu/plantbased.jpg';
 
 const ServeMenuWrapper = styled.div`
   position: relative;
   width: 35rem;
   height: 30rem;
-  border-radius: 3rem;
+  border-radius: 1rem;
   background-image: url(${props => props.menuImg});
   background-size: cover;
   background-position: center;

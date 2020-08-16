@@ -25,8 +25,8 @@ const Label = styled.h2`
 `
 
 const Description = styled.p`
-  font-size: 1.6rem;
-  font-family: inherit;
+  font-size: 2rem;
+  font-family:  'Felipa', cursive;
   font-weight: 400;
   margin: 2rem 0;
   margin-top: 0rem;
