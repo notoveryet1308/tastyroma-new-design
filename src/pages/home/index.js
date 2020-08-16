@@ -9,6 +9,7 @@ import MobChefSpecial from '../../components/mobile/ChefSpecial';
 import ChefSpecial from '../../components/ChefsSpecial';
 import MobRecipe from '../../components/mobile/Recipe';
 import Recipe from '../../components/Recipe';
+import Subscribe from '../../components/Subscribe';
 
 function Index() {
   return (
@@ -22,6 +23,7 @@ function Index() {
       <ChefSpecial />
       <MobRecipe/>
       <Recipe />
+      <Subscribe />
     </div>
   )
 }
