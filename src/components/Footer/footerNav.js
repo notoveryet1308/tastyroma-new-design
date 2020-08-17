@@ -27,12 +27,15 @@ const footlinks = [
 ]
 
 const FooterNavWrapper = styled.div`
-  width: 18rem;
+  /* width: 18rem; */
   height: 100%;
   display: flex;
   flex-direction: column;
-  
+  grid-column: 1 / 4;
   /* background: purple; */
+  @media (max-width: 650px){
+    grid-column: 1/ span 5;  
+  }
 
 `
 

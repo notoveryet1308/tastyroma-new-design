@@ -2,13 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 
 const DesWrapper = styled.div`
-  padding: 1rem; 
-  width: 50%;
+  /* padding: 1rem;  */
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  grid-column: 4 / span 4;
   /* background: red; */
+
+  @media (max-width: 650px){
+    grid-column: 2/ span 8;
+    grid-row: 2 /3;
+  }
+  @media (max-width: 650px){
+    grid-column: 1/ span 11;
+    grid-row: 2 /3;
+  }
 `
 const Description = styled.p`
   width: 100%;
@@ -16,6 +26,9 @@ const Description = styled.p`
   font-size: 1.6rem;
   text-align: center;
   color: #fff;
+  @media (max-width: 650px){
+    font-size: 1.4rem;
+  }
 `
 const Banner = styled.div`
   width: 100%;

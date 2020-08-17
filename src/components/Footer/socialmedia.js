@@ -2,23 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SocialmediaWrapper = styled.div`
-  width: 18rem;
   display: flex;
-  /* justify-content: flex-end; */
   flex-direction: column;
   /* background: blue; */
+  grid-column: 8 / span 3;
+  @media (max-width: 650px){
+    grid-column: 6/ 11;  
+  }
 
 `
 const MediahandleBox = styled.div`
   width: 100%;
   height: 5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 `
 const Media = styled.div`
   display: inline-block;
-  margin: 0 .7rem;
+  margin: 0 .2rem;
+  @media (min-width: 768px){
+    margin: .7rem;
+  }
 `
 const BackToTop = styled.div`
   width: 6rem;
@@ -37,6 +42,10 @@ const Text = styled.p`
   font-size: 1.6rem;
   color: #fff;
   margin: .1rem 0;
+`
+const BackBox = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `
 
 function Socialmedia() {
@@ -75,11 +84,14 @@ function Socialmedia() {
           </svg>
         </Media>
       </MediahandleBox>
-      <BackToTop>
-        <Text>Back</Text>
-        <Text>To</Text>
-        <Text>Top</Text>
-      </BackToTop>
+      <BackBox>
+        <BackToTop>
+          <Text>Back</Text>
+          <Text>To</Text>
+          <Text>Top</Text>
+        </BackToTop>
+      </BackBox>
+
     </SocialmediaWrapper>
   )
 }

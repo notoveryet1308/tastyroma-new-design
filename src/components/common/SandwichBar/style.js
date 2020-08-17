@@ -13,6 +13,7 @@ export const SandwichWrapper = styled.div`
   align-items: center;
   background: ${props => props.theme.primaryColor};
   cursor: pointer;
+  box-shadow: -5px 5px 40px 20px rgba(227,36,75,0.65);
   @media (max-width: 900px){
     top: 4rem;
     right: 3rem;

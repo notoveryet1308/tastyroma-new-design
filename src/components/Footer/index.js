@@ -11,12 +11,17 @@ const FooterWrapper = styled.div`
   padding-top: 3rem;
   padding-bottom: 2rem;
   /* background: #333; */
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 
-  
-  /* grid-template-columns: 1rem, 1rem, 1rem; */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 23rem;
+  @media (max-width: 650px){
+    grid-template-rows: 20rem 18rem;
+  }
+
 `
 
 function Index() {
