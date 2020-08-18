@@ -33,7 +33,7 @@ function Index({ width, height, price }) {
     setItemCount(itemCount+1);
   }
   const decrementItem = ()=>{
-    if(itemCount > 0)setItemCount(itemCount -1);
+    if(itemCount > 0)setItemCount(itemCount - 1);
   }
   const priceTypeHandler = (e) => {
     setPriceTypeDeatil(!priceTypeDeatil);

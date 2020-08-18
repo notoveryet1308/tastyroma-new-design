@@ -7,6 +7,7 @@ import SnadwichBar from '../../components/common/SandwichBar';
 import HighlightBox from '../../components/common/Highlightbox';
 import ItemCard from '../../components/ItemCard';
 
+
 import {
   MenuListWrapper,
   CoverHead,
@@ -36,9 +37,10 @@ function Index() {
       </MenuCover>
       <MenulistSection>
         <MenuItems>
-          {MenuData[menulist].map(data=> <ItemCard {...data} />)}
+          {MenuData[menulist].map(data => <ItemCard {...data} />)}
         </MenuItems>
       </MenulistSection>
+
     </MenuListWrapper>
   )
 }

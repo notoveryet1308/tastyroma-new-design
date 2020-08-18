@@ -23,6 +23,7 @@ import plainrice from '../../img/desi/plainrice.jpg';
 import shahitukda from '../../img/desi/shahitukda.jpg';
 import tandooripaneertikka from '../../img/desi/pannertikka.jpg';
 
+// south  indian
 import classicidli from '../../img/southindian/classicidli.jpg';
 import dahivada from '../../img/southindian/dahivada.jpg';
 import idiyappam from '../../img/southindian/idiyappam.jpg';
@@ -34,10 +35,47 @@ import ravaupma from '../../img/southindian/ravaupma.jpg';
 import sambarvadai from '../../img/southindian/sambarvadai.jpg';
 import tomatouthappam from '../../img/southindian/tomatouthappam.jpg';
 
+// italian
+import broccolilemonaglioolio from '../../img/Italian/broccolilemonaglioolio.jpg';
+import bruschettatomatorocksalt from '../../img/Italian/bruschettatomatorocksalt.jpg';
+import creamyrisotto from '../../img/Italian/creamyrisotto.jpg';
+import mushroomchickencroustade from '../../img/Italian/mushroomchickencroustade.jpg';
+import pennepestotomato from '../../img/Italian/pennepestotomato.jpg';
+import pestoroastedchickensalad from '../../img/Italian/pestoroastedchickensalad.jpeg';
+import prawnaglioolionew from '../../img/Italian/prawnaglioolionew.jpeg';
+import spiedinitoscanachicken from '../../img/Italian/spiedinitoscanachicken.jpg';
+import spinachmushroomandcornlasagna from '../../img/Italian/spinachmushroomandcornlasagna.jpg';
+import twicebakedcheesesouffle from '../../img/Italian/twicebakedcheesesouffle.png';
 
+// pizza 
 
+import barbequechicken from '../../img/Pizza/barbequechicken.jpg';
+import cheesepizza from '../../img/Pizza/cheesepizza.jpg';
+import chickenfiesta from '../../img/Pizza/chickenfiesta.jpg';
+import margherita from '../../img/Pizza/margherita.jpg';
+import meatza from '../../img/Pizza/meatza.jpg';
+import tomatopizza from '../../img/Pizza/tomatopizza.jpg';
 
+// indian snacks
 
+import chakli from '../../img/IndianSnacks/chakli.jpg';
+import gobimanchurian from '../../img/IndianSnacks/gobimanchurian.jpg';
+import harabharakabab from '../../img/IndianSnacks/harabharakabab.jpg';
+import meduvada from '../../img/IndianSnacks/meduvada.jpg';
+import ravadhokla from '../../img/IndianSnacks/ravadhokla.jpg';
+import vadapav from '../../img/IndianSnacks/vadapav.jpg';
+import vegspringroll from '../../img/IndianSnacks/vegspringroll.jpg';
+
+// plantbased
+
+import cauliflowertacos from '../../img/plantbased/cauliflowertacos.jpg';
+import coconutspinachtempeh from '../../img/plantbased/coconutspinachtempeh.jpg';
+import kashmirichickpeabowls from '../../img/plantbased/kashmirichickpeabowls.jpg';
+import mediterraneancouscousbowls from '../../img/plantbased/mediterraneancouscousbowls.jpg';
+import mediterraneanveggiesandwich from '../../img/plantbased/mediterraneanveggiesandwich.jpg';
+import mungbeankitchari from '../../img/plantbased/mungbeankitchari.jpg';
+import teriyakivegetable from '../../img/plantbased/teriyakivegetable.jpg';
+import tofusaagpanner from '../../img/plantbased/tofusaagpanner.jpg';
 
 
 
@@ -79,32 +117,51 @@ const Images = {
   rasamrice,
   ravaupma,
   sambarvadai,
-  tomatouthappam
+  tomatouthappam,
+
+  // Italian
+
+  broccolilemonaglioolio,
+  bruschettatomatorocksalt,
+  creamyrisotto,
+  mushroomchickencroustade,
+  pennepestotomato,
+  pestoroastedchickensalad,
+  prawnaglioolionew,
+  spiedinitoscanachicken,
+  spinachmushroomandcornlasagna,
+  twicebakedcheesesouffle,
+
+  // pizza
+
+  barbequechicken,
+  cheesepizza,
+  chickenfiesta,
+  margherita,
+  meatza,
+  tomatopizza,
+
+  // indian snacks
+  chakli,
+  gobimanchurian,
+  harabharakabab,
+  meduvada,
+  ravadhokla,
+  vadapav,
+  vegspringroll,
+
+  // plantbased
+
+
+  cauliflowertacos,
+  coconutspinachtempeh,
+  kashmirichickpeabowls,
+  mediterraneancouscousbowls,
+  mediterraneanveggiesandwich,
+  mungbeankitchari,
+  teriyakivegetable,
+  tofusaagpanner,
+
 }
 
-export default  Images;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Images;
