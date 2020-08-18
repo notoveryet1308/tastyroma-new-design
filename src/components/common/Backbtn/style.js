@@ -8,7 +8,7 @@ export const BackBtnWrapper = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${props => props.theme.backBtnBg};
+  background: ${props => props.theme.primaryColor};
   cursor: pointer;
   @media (max-width: 768px){
     width: 3rem;

@@ -16,28 +16,28 @@ import vegbiryani from './img/special_Item/vegbiryani.jpg';
 
 export const SpecialMenuList = [{
     name: "Chicken Biryani",
-    to: "/special-item-chicken-biryani",
+    to: "/special-item/chicken-biryani",
     img: chickenbiryani,
     cat: "Chef's Special",
     rating:"4.1"
   },
   {
     name: "Creamy Daal Makhni",
-    to: "/special-item-daal-makhni",
+    to: "/special-item/daal-makhni",
     img: creamydalmakhani,
     cat: "Chef's Special",
     rating:"4.2"
   },
   {
     name: "Lemon Bread",
-    to: "/special-item-lemon-bread",
+    to: "/special-item/lemon-bread",
     img: lemonbread,
     cat: "Chef's Special",
     rating:"4.3"
   },
   {
     name: "Samosa",
-    to: "/special-item-samosa",
+    to: "/special-item/samosa",
     img: samosa,
     cat: "Chef's Special",
     rating:"4.4"
@@ -62,31 +62,31 @@ export const SpecialMenuList = [{
 
 export const Menus = [{
     name: "Desi Flavor",
-    "to": "/desi-flavour",
+    "to": "/menu/desi-flavour",
     "img": desi
   }, {
     name: "Italian",
-    "to": "/italian",
+    "to": "/menu/italian",
     "img": italian
   },
   {
     name: "Indian Snacks",
-    "to": "/indian-snacks",
+    "to": "/menu/indian-snacks",
     "img": indian_snacks
   },
   {
     name: "South Indian",
-    "to": "/south-indian",
+    "to": "/menu/south-indian",
     "img": south_indian
   },
   {
     name: "Plant Based",
-    "to": "/plant-based",
+    "to": "/menu/plantbased",
     "img": plantbased
   },
   {
     name: "Pizza",
-    "to": "/pizza",
+    "to": "/menu/pizza",
     "img": pizza
   }
 ]
