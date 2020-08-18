@@ -58,13 +58,15 @@ const SouthIndianList = [{
     "name": "Dahi Vada",
     "price": [95],
     "isVeg": true,
-    "rating": 4.5
+    "rating": 4.5,
+    "type":"South Indian"
   },
   {
     "name": "Paneer Dosa",
     "price": [120],
     "isVeg": true,
-    "rating": 4.5
+    "rating": 4.5,
+    "type":"South Indian"
   }
 ]
 
