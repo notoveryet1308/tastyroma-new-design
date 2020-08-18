@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {withRouter} from 'react-router-dom'
 import ItemToCart from '../ItemToCart';
 import { ReactComponent as RatingIcon } from '../../img/svg/Rating.svg';
 import { ReactComponent as AddIcon } from '../../img/svg/Add.svg';
@@ -17,16 +17,17 @@ import {
 } from './style';
 
 
-function Index({ name, price, rating, imgpath, type }) {
+function Index({ menulist, name, price, rating, type, history }) {
   const [openToCart, setOpenToCart] = useState(false);
   const modifiedName = name.toLowerCase().split(" ").join("");
+  const urlName = name.toLowerCase().split(" ").join("-");
   const handleOpen = () => {
     setOpenToCart(!openToCart);
   }
 
   return (
     <CardWrapper>
-      <CardImg imgpath={IMAGE[modifiedName]} />
+      <CardImg imgpath={IMAGE[modifiedName]} onClick={()=> history.push(`/menu/${menulist}/${urlName}`)} />
 
       <CardDetailBox display={!openToCart ? "block" : "none"}>
         <CardName>{name}</CardName>
@@ -47,4 +48,4 @@ function Index({ name, price, rating, imgpath, type }) {
   )
 }
 
-export default Index;
+export default withRouter(Index);

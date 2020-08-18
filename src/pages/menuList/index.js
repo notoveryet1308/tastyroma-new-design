@@ -37,7 +37,7 @@ function Index() {
       </MenuCover>
       <MenulistSection>
         <MenuItems>
-          {MenuData[menulist].map(data => <ItemCard {...data} />)}
+          {MenuData[menulist].map(data => <ItemCard {...data} menulist={menulist} />)}
         </MenuItems>
       </MenulistSection>
 

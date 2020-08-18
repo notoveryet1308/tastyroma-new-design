@@ -37,6 +37,7 @@ export const CardImg = styled.div`
   background-image: url(${props => props.imgpath});
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 `
 
 export const CardDetailBox = styled.div`
@@ -50,8 +51,9 @@ export const CardDetailBox = styled.div`
 `
 export const CardName = styled.h3`
   font-family: ${props => props.theme.primaryFont};
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   letter-spacing:1px;
+  text-transform: capitalize;
 `
 export const AddBtn = styled.div`
   position: absolute;
