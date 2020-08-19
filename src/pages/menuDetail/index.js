@@ -42,26 +42,41 @@ const Banner = styled.div`
   justify-content: center;
   align-items: center;
   background: ${props => props.bgColor};
-  .name{
-    position: relative;
+  opacity:.9;
+
+  @media (max-width: 500px){
+    height: 8rem;
+  }
+`
+const MenuName = styled.p`
+   
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 2.5rem;
     color: #fff;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     letter-spacing: .1rem;
-  }
-
-  @media (max-width: 500px){
-    height: 8rem;
-    .name{
+    text-align: center;
+     @media (max-width: 500px){
       font-size: 2rem;
-    }
+    
+  }
+  @media (max-width: 450px){
+      width: 90%;
+      margin: 0 auto;
+      font-size: 1.7rem;
+      text-align: center;
+    
   }
 `
 
 const BannerTop = styled.div` 
   position: absolute;
-  top: -2.5rem;
+  top: 24.6vh;
   left: 0;
   width: 20rem;
   height: 2.5rem;
@@ -74,13 +89,16 @@ const BannerTop = styled.div`
   padding-right: 1rem;
   font-size:1.5rem;
   align-items: center;
+  @media (min-width: 500px){
+    top: 23vh;
+  }
 `
 
 function Index() {
   const { menulist, menuname } = useParams();
   const [itemDetail, setItemDetail] = useState("");
   const imgName = menuname.split("-").join("");
-  const { data, loading} = usePalette(IMAGES[imgName]);
+  const { data, loading } = usePalette(IMAGES[imgName]);
   useEffect(() => {
     const MenuCategory = MenuData[menulist];
     const modMenuName = menuname.toUpperCase().split("-").join(" ");
@@ -97,10 +115,9 @@ function Index() {
           <BackBtn />
           <SandwichBar />
         </CoverHead>
-        {!loading && <Banner bgColor={data.vibrant}>
-         <BannerTop>{itemDetail.type}</BannerTop>
-          <span className="name">{itemDetail.name}</span>
-        </Banner>}
+        <BannerTop>{itemDetail.type}</BannerTop>
+        {!loading && <Banner bgColor={data.vibrant} />} 
+        <MenuName>{itemDetail.name}</MenuName>
       </TopSection>
     </MenuDetailWrapper>
   )
