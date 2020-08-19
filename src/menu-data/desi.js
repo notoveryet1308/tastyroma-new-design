@@ -1,12 +1,5 @@
 
-const DesiList = [{
-    name: "Tandoori Paneer Tikka",
-    price: [200, 390],
-    type: "starter",
-    isVeg: true,
-    rating: 4.5,
-    imgpath: '../../img/desi/'
-  },
+const DesiList = [
   {
     name: "Veg Shammi Kebab",
     price: [300, 590],
@@ -190,7 +183,15 @@ const DesiList = [{
     type: "salad",
     rating: 4.5,
     imgpath: '../../img/desi/'
-  }
+  },
+  {
+    name: "Tandoori  Paneer  Tikka",
+    price: [200, 390],
+    type: "starter",
+    isVeg: true,
+    rating: 4.5,
+    imgpath: '../../img/desi/'
+  },
 ]
 
 export default  DesiList;

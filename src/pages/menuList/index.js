@@ -6,7 +6,7 @@ import BackBtn from '../../components/common/Backbtn';
 import SnadwichBar from '../../components/common/SandwichBar';
 import HighlightBox from '../../components/common/Highlightbox';
 import ItemCard from '../../components/ItemCard';
-
+import ScrollToTop from '../../components/ScrollToTop';
 
 import {
   MenuListWrapper,
@@ -22,6 +22,7 @@ function Index() {
 
   return (
     <MenuListWrapper>
+      <ScrollToTop />
       <CoverHead>
         <BackBtn />
         <SnadwichBar />

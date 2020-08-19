@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Hero from '../../components/hero';
 import MobileMiniDescrription from '../../components/mobile/MiniDescription';
@@ -11,10 +12,13 @@ import MobRecipe from '../../components/mobile/Recipe';
 import Recipe from '../../components/Recipe';
 import Subscribe from '../../components/Subscribe';
 import Footer from '../../components/Footer';
+import ScrollToTop from '../../components/ScrollToTop';
 
 function Index() {
+
   return (
     <div>
+      <ScrollToTop />
       <Hero />
       <MobileMiniDescrription />
       <MiniDescription />
@@ -22,7 +26,7 @@ function Index() {
       <WeServe />
       <MobChefSpecial />
       <ChefSpecial />
-      <MobRecipe/>
+      <MobRecipe />
       <Recipe />
       <Subscribe />
       <Footer />
@@ -30,4 +34,4 @@ function Index() {
   )
 }
 
-export default Index;
+export default withRouter(Index);
