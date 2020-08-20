@@ -20,7 +20,7 @@ import {
 } from './style';
 
 
-function Index({ width, height, price }) {
+function Index({ width, height, price, other }) {
   const [priceTypeDeatil, setPriceTypeDeatil] = useState(false);
   const [itemCount, setItemCount] = useState(0);
   const [type, setType] = useState("half");
@@ -51,6 +51,7 @@ function Index({ width, height, price }) {
         width={`${priceTypeDeatil ? "10rem" : "1rem"}`}
         zIndex={`${priceTypeDeatil ? "22" : "-1"}`}
         height={`${priceTypeDeatil ? "9rem" : "1rem"}`}
+        opacity= {`${priceTypeDeatil ? "1" : "0"}`}
       >
         <TypeInput
           value="half"

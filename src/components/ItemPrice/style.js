@@ -8,6 +8,7 @@ export const ItemPriceWrapper = styled.div`
  display: flex;
  flex-direction: column;
  margin-top: 1rem;
+ padding: 0 .5rem;
 
 
 `
@@ -53,6 +54,7 @@ export const PriceDetailType = styled.div`
   z-index:${props => props.zIndex};
   transition: all 300ms ease;
   padding-top: 1rem;
+  opacity: ${props => props.opacity};
 `
 export const CaretBox = styled.div` 
   display:flex;

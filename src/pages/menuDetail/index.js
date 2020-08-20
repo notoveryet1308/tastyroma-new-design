@@ -7,7 +7,8 @@ import BackBtn from '../../components/common/Backbtn';
 import SandwichBar from '../../components/common/SandwichBar';
 import MenuData from '../../menu-data/index';
 import IMAGES from '../../menu-data/image';
-
+import { ReactComponent as RatingStar } from '../../img/svg/Rating.svg';
+import ItemToPrice from '../../components/ItemPrice';
 const MenuDetailWrapper = styled.div`
   position: relative;
 
@@ -42,8 +43,7 @@ const Banner = styled.div`
   justify-content: center;
   align-items: center;
   background: ${props => props.bgColor};
-  opacity:.9;
-
+  opacity:.9;  
   @media (max-width: 500px){
     height: 8rem;
   }
@@ -76,7 +76,7 @@ const MenuName = styled.p`
 
 const BannerTop = styled.div` 
   position: absolute;
-  top: 24.6vh;
+  top: -2.5rem;
   left: 0;
   width: 20rem;
   height: 2.5rem;
@@ -89,8 +89,118 @@ const BannerTop = styled.div`
   padding-right: 1rem;
   font-size:1.5rem;
   align-items: center;
-  @media (min-width: 500px){
-    top: 23vh;
+`
+
+const ContentSection = styled.div`
+  width: 70%;
+  margin: 0 auto;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width:  1200px){
+    width: 80%;
+  }
+  @media (max-width:  1000px){
+    width: 95%;
+  }
+  @media (max-width: 860px){
+    flex-direction: column-reverse;
+  }
+  
+`
+const MenuInfo = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+   @media (max-width: 860px){
+    width: 90%;
+    margin: 4rem auto;
+
+  }
+  .description-label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  .description{
+     font-family: inherit;
+     font-size: 1.7rem;
+     color: #AEA7A7;
+     
+  }
+  .rating-label{
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #fff; 
+    text-transform: uppercase;
+    margin-bottom: .3rem;
+    
+    }
+  .rating-box{
+    width: 100%;
+    height: auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+    .rate{
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgba(248, 39, 71, 1);
+    }
+    .rateThis{
+      width: 8rem;
+      height: 2.5rem;
+      justify-content:center;
+      align-items: center;
+      background: rgba(248, 39, 71, 0.73);
+      color: #fff;
+      cursor:pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 2rem;
+      border-radius: .1rem;
+      font-size: 1.4rem;
+    }
+  }
+
+`
+const AddCommmentBtn = styled.div`
+  width: 100%;
+  height: 4rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: .4rem;
+  background: rgba(180, 193, 227, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  cursor: pointer;
+`
+const AddToCart = styled.div`
+   background: #fff;
+   width: 40%;
+   height: 15rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: .5rem;
+   @media (max-width: 860px){
+    width: 90%;
+    margin: 4rem auto;
+
+  }
+  @media (max-width: 390px){
+    width: 95%;
+    margin: 2rem auto;
+
   }
 `
 
@@ -106,7 +216,6 @@ function Index() {
     setItemDetail(...itemdata)
   }, [menulist, menuname]);
 
-
   return (
     <MenuDetailWrapper>
       <ScrollToTop />
@@ -115,10 +224,29 @@ function Index() {
           <BackBtn />
           <SandwichBar />
         </CoverHead>
-        <BannerTop>{itemDetail.type}</BannerTop>
-        {!loading && <Banner bgColor={data.vibrant} />} 
+        {!loading && <Banner bgColor={data.vibrant} type={itemDetail.type}>
+          <BannerTop>{itemDetail.type}</BannerTop>
+        </Banner>}
         <MenuName>{itemDetail.name}</MenuName>
       </TopSection>
+      <ContentSection>
+        <MenuInfo>
+          <p className="description-label">description</p>
+          <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorem tempora excepturi tenetur ad iusto quod obcaecati ut libero. Repellendus, quisquam? Autem corporis odit incidunt debitis expedita sint voluptates voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ex, voluptatem aliquam quam magnam impedit dolores debitis molestias, dignissimos nulla, beatae aut esse non numquam aperiam. Tempore maxime nam expedita?</p>
+          <p className="rating-label">Rating</p>
+          <div className="rating-box">
+            <div className="rate">{itemDetail.rating} <RatingStar /></div>
+            <div className="rateThis">
+              RATE THIS 
+            </div>
+
+          </div>
+          <AddCommmentBtn>Add Comment </AddCommmentBtn>
+        </MenuInfo>
+        <AddToCart>
+          <ItemToPrice width="30rem" height="10rem" price={[300, 500]} />
+        </AddToCart>
+      </ContentSection>
     </MenuDetailWrapper>
   )
 }
