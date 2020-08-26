@@ -16,42 +16,42 @@ import vegbiryani from './img/special_Item/vegbiryani.jpg';
 
 export const SpecialMenuList = [{
     name: "Chicken Biryani",
-    to: "/special-item/chicken-biryani",
+    to: "/menu/special-item/chicken-biryani",
     img: chickenbiryani,
     cat: "Chef's Special",
     rating:"4.1"
   },
   {
-    name: "Creamy Daal Makhni",
-    to: "/special-item/daal-makhni",
+    name: "Creamy Dal Makhni",
+    to: "/menu/special-item/creamy-dal-makhni",
     img: creamydalmakhani,
     cat: "Chef's Special",
     rating:"4.2"
   },
   {
     name: "Lemon Bread",
-    to: "/special-item/lemon-bread",
+    to: "/menu/special-item/lemon-bread",
     img: lemonbread,
     cat: "Chef's Special",
     rating:"4.3"
   },
   {
     name: "Samosa",
-    to: "/special-item/samosa",
+    to: "/menu/special-item/samosa",
     img: samosa,
     cat: "Chef's Special",
     rating:"4.4"
   },
   {
     name: "Mutton Biryani",
-    to: "/special-item-mutton-biryani",
+    to: "/menu/special-item/mutton-biryani",
     img: muttonbiryani,
     cat: "Chef's Special",
     rating:"4.5"
   },
   {
     name: "Veg Biryani",
-    to: "/special-item-veg-biryani",
+    to: "/menu/special-item/veg-biryani",
     img: vegbiryani,
     cat: "Chef's Special",
     rating:"4.6"

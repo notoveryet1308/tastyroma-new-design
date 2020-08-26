@@ -28,7 +28,7 @@ function Index({ width, height, price, other }) {
     half: price[0],
     full: price[1]
   }
-  
+
   const incremntItem = ()=>{
     setItemCount(itemCount+1);
   }

@@ -77,6 +77,15 @@ import mungbeankitchari from '../../img/plantbased/mungbeankitchari.jpg';
 import teriyakivegetable from '../../img/plantbased/teriyakivegetable.jpg';
 import tofusaagpanner from '../../img/plantbased/tofusaagpanner.jpg';
 
+// special menu
+
+import chickenbiryani from '../../img/special_Item/chickenbiryani.jpg';
+import creamydalmakhni from '../../img/special_Item/creamydalmakhani.jpg';
+import lemonbread from '../../img/special_Item/lemonbread.jpg';
+import muttonbiryani from '../../img/special_Item/muttonbiryani.jpg';
+import samosa from '../../img/special_Item/samosa.jpg';
+import vegbiryani from '../../img/special_Item/vegbiryani.jpg';
+
 
 
 
@@ -161,6 +170,14 @@ const Images = {
   mungbeankitchari,
   teriyakivegetable,
   tofusaagpanner,
+
+  // special item
+  chickenbiryani,
+  creamydalmakhni,
+  lemonbread,
+  muttonbiryani,
+  samosa,
+  vegbiryani
 
 }
 

@@ -4,6 +4,7 @@ import SOUTHINDIAN from './southIndian';
 import PIZZA from './pizza';
 import INDIANSNACKS from './indianSnacks';
 import PLANTBASED from './plantbased';
+import SPECIALITEM from './specialmenu';
 
 const MENUDATA = {
   "desi-flavour": DESI,
@@ -11,7 +12,8 @@ const MENUDATA = {
   "south-indian": SOUTHINDIAN,
   "pizza":PIZZA,
   "indian-snacks": INDIANSNACKS,
-  "plantbased": PLANTBASED
+  "plantbased": PLANTBASED,
+  "special-item": SPECIALITEM
 }
 
 export default MENUDATA;

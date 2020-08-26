@@ -216,6 +216,8 @@ function Index() {
     setItemDetail(...itemdata)
   }, [menulist, menuname]);
 
+  console.log(itemDetail["price"])
+
   return (
     <MenuDetailWrapper>
       <ScrollToTop />
@@ -244,7 +246,7 @@ function Index() {
           <AddCommmentBtn>Add Comment </AddCommmentBtn>
         </MenuInfo>
         <AddToCart>
-          <ItemToPrice width="30rem" height="10rem" price={[300, 500]} />
+        {itemDetail &&  <ItemToPrice width="30rem" height="10rem"  price={itemDetail["price"]} />}
         </AddToCart>
       </ContentSection>
     </MenuDetailWrapper>
