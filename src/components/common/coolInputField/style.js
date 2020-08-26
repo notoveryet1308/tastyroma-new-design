@@ -33,8 +33,6 @@ export const Input = styled.input`
   font-size: 1.8rem;
   caret-color: #FB4B4B;
   padding: .2rem 1.5rem;
-  color: #FB4B4B;
-  &::placeholder{
-    color: #fff;
-  }
+  color: #fff;
+  
 `
