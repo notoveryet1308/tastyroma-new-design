@@ -7,6 +7,7 @@ import Home from './pages/home';
 import MenuList from './pages/menuList';
 import MenuListDetail from './pages/menuDetail';
 import Menu from './pages/menu';
+import BookTable from './pages/booktable';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/menu" exact component={Menu} />
           <Route path="/menu/:menulist" exact component={MenuList} />
           <Route path="/menu/:menulist/:menuname" exact component={MenuListDetail} />
+          <Route path="/book-a-table" exact component={BookTable} />
         </Switch>
      
     </div>
