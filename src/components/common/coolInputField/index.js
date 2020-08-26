@@ -7,7 +7,7 @@ import {
 
 
 
-function Index({ name, getValue }) {
+function Index({ name, getValue, type }) {
   const [value, setValue] = useState("");
 
   const onChangeHandler = (e) => {
@@ -28,6 +28,7 @@ function Index({ name, getValue }) {
         name={name}
         placeholder={name}
         value={value}
+        type={type}
         onChange={onChangeHandler}
       // required
       />

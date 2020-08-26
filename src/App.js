@@ -8,6 +8,9 @@ import MenuList from './pages/menuList';
 import MenuListDetail from './pages/menuDetail';
 import Menu from './pages/menu';
 import BookTable from './pages/booktable';
+import Login from './pages/login';
+import Signup from './pages/signup';
+
 
 function App() {
   return (
@@ -19,6 +22,10 @@ function App() {
           <Route path="/menu/:menulist" exact component={MenuList} />
           <Route path="/menu/:menulist/:menuname" exact component={MenuListDetail} />
           <Route path="/book-a-table" exact component={BookTable} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/signup" exact component={Signup} />
+
+
         </Switch>
      
     </div>

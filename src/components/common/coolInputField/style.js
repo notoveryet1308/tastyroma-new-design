@@ -17,7 +17,7 @@ export const Label = styled.label`
   left:  ${props => props.left};
   font-size: 1.8rem;
   text-transform: capitalize;
-  color: #fff;
+  color:rgba(131, 127, 127, 1);
   opacity:  ${props => props.opacity};
   transition: all 300ms ease;
 `
