@@ -50,6 +50,14 @@ const Banner = styled.div`
     height: 4rem;
     font-size: 1.6rem;
   }
+  @media (max-width: 400px){
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+  @media (max-width: 370px){
+    height: 4rem;
+    font-size: 1.3rem;
+  }
 `
 
 function Index({ img, name, to, history }) {
