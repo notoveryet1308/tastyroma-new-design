@@ -42,7 +42,12 @@ const NavMenuWrapper = styled.nav`
   /* background: #eee; */
   display: flex;
   flex-direction: column;
-
+ 
+ @media (max-width: 768px){
+   top:30%;
+   left: 50%;
+   transform: translateX(-50%);
+ }
 `
 const StyledNavLink = styled(NavLink)`
    display: inline-block;
