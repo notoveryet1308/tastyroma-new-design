@@ -44,7 +44,7 @@ const NavMenuWrapper = styled.nav`
   flex-direction: column;
  
  @media (max-width: 450px){
-   top:50%;
+   top:40%;
    left: 50%;
    width: 15rem;
    transform: translateX(-30%);
