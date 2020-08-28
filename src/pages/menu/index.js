@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+import SideMenu from '../../components/sideNavlist';
+
 import BackBtn from '../../components/common/Backbtn';
 import SandwichBar from '../../components/common/SandwichBar';
 import HighlightBox from '../../components/common/Highlightbox';
 import MenuCard from '../../components/menucard';
 
 import menuImg from '../../img/menu-img.jpg';
-import {Menus} from '../../utilities';
+import { Menus } from '../../utilities';
 
 const MenuWrapper = styled.div`
   width: 100%;
@@ -70,8 +73,17 @@ const MenuCards = styled.div`
 `
 
 function Index() {
+  const open = useSelector(st => st.sideMenuReducer.open);
+
   return (
     <MenuWrapper>
+      <SideMenu
+        width={open ? "100%" : "10%"}
+        height={open ? "100%" : "10%"}
+        opacity={open ? "1" : "0"}
+        zIndex={open ? "22" : "-1"}
+        scale={open ? "200" : "1"}
+      />
       <TopSection img={menuImg}>
         <CoverHead>
           <BackBtn />
@@ -82,7 +94,7 @@ function Index() {
         </Banner>
       </TopSection>
       <MenuCards>
-        {Menus.map(menu=> <MenuCard {...menu}/>)}
+        {Menus.map(menu => <MenuCard {...menu} />)}
       </MenuCards>
     </MenuWrapper>
   )

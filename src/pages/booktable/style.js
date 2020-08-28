@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const BookTableWrapper = styled.div`
   width: 100%;
   position: relative;
+  
 `
 export const TopSection = styled.section`
   position: relative;

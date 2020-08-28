@@ -1,5 +1,8 @@
 import React from 'react';
 import { useParams, withRouter } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+import SideMenu from '../../components/sideNavlist';
 import MenuCoverData from './utility';
 import MenuData from '../../menu-data';
 import BackBtn from '../../components/common/Backbtn';
@@ -17,11 +20,19 @@ import {
 } from './style';
 
 function Index() {
+  const open = useSelector(st => st.sideMenuReducer.open);
   const { menulist } = useParams();
   const { cover, heading } = MenuCoverData[menulist];
 
   return (
     <MenuListWrapper>
+      <SideMenu
+        width={open ? "100%" : "10%"}
+        height={open ? "100%" : "10%"}
+        opacity={open ? "1" : "0"}
+        zIndex={open ? "22" : "-1"}
+        scale={open ? "200" : "1"}
+      />
       <ScrollToTop />
       <CoverHead>
         <BackBtn />

@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import _ from 'lodash';
+import { useSelector } from 'react-redux';
 
+import SideMenu from '../../components/sideNavlist';
 import BackBtn from '../../components/common/Backbtn';
 import SandwichBar from '../../components/common/SandwichBar';
 import HighlightBox from '../../components/common/Highlightbox';
@@ -29,7 +31,7 @@ const date = today.getDate();
 const month = today.getMonth() + 1;
 
 function Index() {
-
+  const open = useSelector(st => st.sideMenuReducer.open);
   const [initial, setInitial] = useState({ box_1: true, box_2: false, box_3: false });
   const [inputValues, setInputValue] = useState({});
   const [booking, setBooking] = useState(false);
@@ -55,6 +57,13 @@ function Index() {
   }
   return (
     <BookTableWrapper>
+      <SideMenu
+        width={open ? "100%" : "10%"}
+        height={open ? "100%" : "10%"}
+        opacity={open ? "1" : "0"}
+        zIndex={open ? "22" : "-1"}
+        scale={open ? "200" : "0"}
+      />
       <TopSection img={bookatable}>
         <CoverHead>
           <BackBtn />

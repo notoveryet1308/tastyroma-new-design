@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { usePalette } from 'react-palette'
+
+import SideMenu from '../../components/sideNavlist';
 import ScrollToTop from '../../components/ScrollToTop';
 import BackBtn from '../../components/common/Backbtn';
 import SandwichBar from '../../components/common/SandwichBar';
@@ -205,6 +208,8 @@ const AddToCart = styled.div`
 `
 
 function Index() {
+
+  const open = useSelector(st => st.sideMenuReducer.open);
   const { menulist, menuname } = useParams();
   const [itemDetail, setItemDetail] = useState("");
   const imgName = menuname.split("-").join("");
@@ -220,6 +225,13 @@ function Index() {
 
   return (
     <MenuDetailWrapper>
+      <SideMenu
+        width={open ? "100%" : "10%"}
+        height={open ? "100%" : "10%"}
+        opacity={open ? "1" : "0"}
+        zIndex={open ? "22" : "-1"}
+        scale={open ? "200" : "1"}
+      />
       <ScrollToTop />
       <TopSection img={IMAGES[imgName]}>
         <CoverHead>
@@ -239,14 +251,14 @@ function Index() {
           <div className="rating-box">
             <div className="rate">{itemDetail.rating} <RatingStar /></div>
             <div className="rateThis">
-              RATE THIS 
+              RATE THIS
             </div>
 
           </div>
           <AddCommmentBtn>Add Comment </AddCommmentBtn>
         </MenuInfo>
         <AddToCart>
-        {itemDetail &&  <ItemToPrice width="30rem" height="10rem"  price={itemDetail["price"]} />}
+          {itemDetail && <ItemToPrice width="30rem" height="10rem" price={itemDetail["price"]} />}
         </AddToCart>
       </ContentSection>
     </MenuDetailWrapper>

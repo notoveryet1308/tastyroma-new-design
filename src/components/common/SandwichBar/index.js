@@ -1,17 +1,20 @@
-import React from 'react'
-import { SandwichWrapper } from './style';
+import React from 'react';
+import {useDispatch } from 'react-redux';
+import { ReactComponent as Bar } from '../../../img/svg/Bar.svg';
 
-function index() {
+
+import { SandwichWrapper } from './style';
+import { openSideMenu } from '../../../redux/actions/sideMenu';
+
+function Index() {
+ 
+  const dispatch = useDispatch();
+
   return (
-    <SandwichWrapper>
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-align-justified" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" />
-        <line x1="4" y1="6" x2="20" y2="6" />
-        <line x1="4" y1="12" x2="20" y2="12" />
-        <line x1="4" y1="18" x2="20" y2="18" />
-      </svg>
+    <SandwichWrapper onClick={() => dispatch(openSideMenu())}>
+      <Bar />
     </SandwichWrapper>
   )
 }
 
-export default index
+export default Index;

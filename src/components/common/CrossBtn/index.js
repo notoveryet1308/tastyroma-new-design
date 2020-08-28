@@ -1,16 +1,16 @@
 import React from 'react'
+import {useDispatch} from 'react-redux';
 import { CrossBtnWrapper } from './style';
+import {HideSideMenu} from '../../../redux/actions/sideMenu';
+import {ReactComponent as Cross} from '../../../img/svg/Cross.svg';
 
-function index() {
+function Index() {
+  const dispatch = useDispatch();
   return (
-    <CrossBtnWrapper>
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#FFf" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" />
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
-      </svg>
+    <CrossBtnWrapper onClick={()=> dispatch(HideSideMenu())}>
+      <Cross />
     </CrossBtnWrapper>
   )
 }
 
-export default index
+export default Index;

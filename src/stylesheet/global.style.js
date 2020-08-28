@@ -7,6 +7,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html{
+    width: 100%;
+    height: 100%;
     font-size: 0.625rem;
     font-family: ${props => props.theme.primaryFont};
     background: ${props => props.theme.black};

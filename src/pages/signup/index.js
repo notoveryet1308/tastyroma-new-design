@@ -1,5 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import _ from 'lodash';
+import { useSelector } from 'react-redux';
+import SideMenu from '../../components/sideNavlist';
+
 import BackBtn from '../../components/common/Backbtn';
 import SandwichBar from '../../components/common/SandwichBar';
 import HighlightBox from '../../components/common/Highlightbox';
@@ -19,6 +22,8 @@ import {
 
 
 function Index() {
+  const open = useSelector(st => st.sideMenuReducer.open);
+
   const [inputValues, setInputValue] = useState({});
   const getValue = (value) => {
     setInputValue({ ...inputValues, ...value });
@@ -27,6 +32,13 @@ function Index() {
 
   return (
     <SignupWrapper>
+      <SideMenu
+        width={open ? "100%" : "10%"}
+        height={open ? "100%" : "10%"}
+        opacity={open ? "1" : "0"}
+        zIndex={open ? "22" : "-1"}
+        scale={open ? "200" : "1"}
+      />
       <TopSection img={signupImg}>
         <CoverHead>
           <BackBtn />
@@ -40,7 +52,7 @@ function Index() {
         <InputField name="Firstname" type="text" getValue={debounceHandler} />
         <InputField name="Lastname" type="text" getValue={debounceHandler} />
         <InputField name="Email" type="email" getValue={debounceHandler} />
-        
+
         <InputField name="Password" type="password" getValue={debounceHandler} />
         <InputField name="Confirm Password" type="password" getValue={debounceHandler} />
 
