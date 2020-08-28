@@ -54,6 +54,7 @@ const StyledNavLink = styled(NavLink)`
    font-family: inherit;
    font-weight: bold;
    /* background: #333; */
+  @media (min-width: 768px){
    transition: transform 100ms ease;
    &:active{
      transform: translate(.5rem , .5rem);  
@@ -61,6 +62,7 @@ const StyledNavLink = styled(NavLink)`
    &:hover{
      color: #fff;
    }
+  }
 `
 const LoginSignupBox = styled.div`
   display: flex;
