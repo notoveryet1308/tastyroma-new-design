@@ -7,7 +7,7 @@ import BackBtn from '../../components/common/Backbtn';
 import SandwichBar from '../../components/common/SandwichBar';
 import HighlightBox from '../../components/common/Highlightbox';
 import InputField from '../../components/common/coolInputField';
-
+import ScrollToTop from '../../components/ScrollToTop';
 import signupImg from '../../img/signup.jpg';
 
 import {
@@ -39,6 +39,7 @@ function Index() {
         zIndex={open ? "22" : "-1"}
         scale={open ? "200" : "1"}
       />
+      <ScrollToTop/>
       <TopSection img={signupImg}>
         <CoverHead>
           <BackBtn />

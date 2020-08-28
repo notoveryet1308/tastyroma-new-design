@@ -43,23 +43,25 @@ const NavMenuWrapper = styled.nav`
   display: flex;
   flex-direction: column;
  
- @media (max-width: 768px){
-   top:30%;
+ @media (max-width: 450px){
+   top:50%;
    left: 50%;
-   transform: translateX(-50%);
+   width: 15rem;
+   transform: translateX(-30%);
  }
 `
 const StyledNavLink = styled(NavLink)`
    display: inline-block;
    text-decoration: none;
    color: #000;
-   font-size: 2.5rem;
+   font-size: 2rem;
    text-transform: uppercase;
    margin: .5rem 0;
    font-family: inherit;
    font-weight: bold;
    /* background: #333; */
   @media (min-width: 768px){
+   font-size: 2.5rem; 
    transition: transform 100ms ease;
    &:active{
      transform: translate(.5rem , .5rem);  
@@ -68,6 +70,9 @@ const StyledNavLink = styled(NavLink)`
      color: #fff;
    }
   }
+
+
+
 `
 const LoginSignupBox = styled.div`
   display: flex;
