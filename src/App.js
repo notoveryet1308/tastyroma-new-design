@@ -8,6 +8,7 @@ import Menu from './pages/menu';
 import BookTable from './pages/booktable';
 import Login from './pages/login';
 import Signup from './pages/signup';
+import Cart from './pages/cart';
 
 function App() {
  
@@ -22,6 +23,8 @@ function App() {
         <Route path="/book-a-table" exact component={BookTable} />
         <Route path="/login" exact component={Login} />
         <Route path="/signup" exact component={Signup} />
+        <Route path="/cart" exact component={Cart} />
+
       </Switch>
 
     </div>
