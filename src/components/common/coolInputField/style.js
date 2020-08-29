@@ -18,6 +18,7 @@ export const Label = styled.label`
   font-size: 1.8rem;
   text-transform: capitalize;
   color:rgba(131, 127, 127, 1);
+
   opacity:  ${props => props.opacity};
   transition: all 300ms ease;
 `
@@ -26,6 +27,7 @@ export const Input = styled.input`
   width: 100%;
   height: 4rem;
   background: rgba(131, 127, 127, 0.6);
+  /* background: #fff; */
   border-radius: .5rem;
   border: none;
   outline: none;
@@ -33,6 +35,6 @@ export const Input = styled.input`
   font-size: 1.8rem;
   caret-color: #FB4B4B;
   padding: .2rem 1.5rem;
-  color: #fff;
+  color:#FFF;
   
 `

@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 
 const DesiList = [
   {
@@ -6,7 +7,8 @@ const DesiList = [
     type: "starter",
     isVeg: true,
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Crispy Corn",
@@ -14,7 +16,8 @@ const DesiList = [
     type: "starter",
     isVeg: true,
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Angara Chicken Tikka",
@@ -22,7 +25,8 @@ const DesiList = [
     type: "starter",
     isVeg: false,
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Sweet Spicy Wings",
@@ -30,7 +34,8 @@ const DesiList = [
     type: "starter",
     isVeg: false,
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Garlic N Chicken Seekh",
@@ -38,7 +43,8 @@ const DesiList = [
     type: "starter",
     isVeg: false,
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Kasundi Fish Tikka",
@@ -46,7 +52,8 @@ const DesiList = [
     type: "starter",
     isVeg: false,
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Chilli Garlic Prawns",
@@ -54,7 +61,8 @@ const DesiList = [
     type: "starter",
     isVeg: false,
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Kurkuri Bhindi masala",
@@ -62,7 +70,8 @@ const DesiList = [
     isVeg: true,
     type: "main course",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Panner E Lazeez",
@@ -70,7 +79,8 @@ const DesiList = [
     isVeg: true,
     type: "main course",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Chatpata Jeera Aloo",
@@ -78,7 +88,8 @@ const DesiList = [
     isVeg: true,
     type: "main course",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Malai Kofta Curry",
@@ -86,7 +97,8 @@ const DesiList = [
     isVeg: true,
     type: "main course",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Butter Chicken",
@@ -94,7 +106,8 @@ const DesiList = [
     isVeg: false,
     type: "main course",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Mutton Rogani",
@@ -102,7 +115,8 @@ const DesiList = [
     isVeg: false,
     type: "main course",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Egg Masala",
@@ -110,7 +124,8 @@ const DesiList = [
     isVeg: false,
     type: "main course",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Kesari Phirnee",
@@ -118,7 +133,8 @@ const DesiList = [
     isVeg: true,
     type: "dessert",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Gulab Jamun",
@@ -126,7 +142,8 @@ const DesiList = [
     isVeg: true,
     type: "dessert",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Shahi Tukda",
@@ -134,7 +151,8 @@ const DesiList = [
     isVeg: true,
     type: "dessert",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Mango Mousse",
@@ -142,7 +160,8 @@ const DesiList = [
     isVeg: true,
     type: "dessert",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Plain Rice",
@@ -150,7 +169,8 @@ const DesiList = [
     isVeg: true,
     type: "rice",
     rated: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Jeera Rice",
@@ -158,7 +178,8 @@ const DesiList = [
     isVeg: true,
     type: "rice",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "BEETROOT N CARROT SALAD",
@@ -166,7 +187,8 @@ const DesiList = [
     isVeg: true,
     type: "salad",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "GARDEN GREEN SALAD",
@@ -174,7 +196,8 @@ const DesiList = [
     isVeg: true,
     type: "salad",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "BEANS SPROUT SALAD",
@@ -182,7 +205,8 @@ const DesiList = [
     isVeg: true,
     type: "salad",
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
   {
     name: "Tandoori  Paneer  Tikka",
@@ -190,7 +214,8 @@ const DesiList = [
     type: "starter",
     isVeg: true,
     rating: 4.5,
-    imgpath: '../../img/desi/'
+    imgpath: '../../img/desi/',
+    id: uuidv4(),
   },
 ]
 

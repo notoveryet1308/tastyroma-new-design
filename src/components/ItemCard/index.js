@@ -17,14 +17,13 @@ import {
 } from './style';
 
 
-function Index({ menulist, name, price, rating, type, history }) {
+function Index({ menulist, name, price, rating, type, history,id }) {
   const [openToCart, setOpenToCart] = useState(false);
   const modifiedName = name.toLowerCase().split(" ").join("");
   const urlName = name.toLowerCase().split(" ").join("-");
   const handleOpen = () => {
     setOpenToCart(!openToCart);
   }
-
   return (
     <CardWrapper>
       <CardImg imgpath={IMAGE[modifiedName]} onClick={()=> history.push(`/menu/${menulist}/${urlName}`)} />
@@ -41,7 +40,11 @@ function Index({ menulist, name, price, rating, type, history }) {
           <AddIcon />
         </AddBtn>
       </CardDetailBox>
-      <ItemToCart display={openToCart ? "block" : "none"} price={price} goback={handleOpen} />
+      <ItemToCart 
+        display={openToCart ? "block" : "none"} 
+        goback={handleOpen} 
+        id={id}
+      />
 
 
     </CardWrapper>

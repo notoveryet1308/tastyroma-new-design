@@ -8,7 +8,7 @@ const LabelWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #000;
+  background: ${props => props.theme.black};
   z-index: 10;
 `
 

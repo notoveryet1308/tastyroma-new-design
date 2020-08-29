@@ -5,7 +5,7 @@ import Input from '../common/Input';
 const SubscribeWrapper = styled.div`
   width: 100%;
   height: 35rem;
-  background: #000;
+  background: ${props => props.theme.black};
   @media (max-width: 768px){
     height: 30rem;
   }

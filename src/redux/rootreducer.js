@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux';
 
 import sideMenuReducer from './reducers/sideMenu';
+import cartReducer from './reducers/cart';
 
 const rootReducer = combineReducers({
-   sideMenuReducer
+   sideMenuReducer,
+   cartReducer
 })
 
 export default  rootReducer;
