@@ -25,21 +25,28 @@ import {
 } from './style';
 
 
-function Index({ width, height, id }) {
-  const prevCountRef = useRef();
+function Index({ width, height, id, name }) {
+  const [prevCount , setPrevCount] = useState("");
   const dispatch = useDispatch();
   const { menulist } = useParams();
   const menudata = getMenuData(MENUDATA[menulist], id);
+
+  console.log('MENUDATA', menudata[0].price)
   const selectedItem = {
     menulist,
-    id
+    id,
+    name,
+    price: menudata[0].price
+
   }
   const [priceTypeDeatil, setPriceTypeDeatil] = useState(false);
   const [itemCount, setItemCount] = useState(0);
   const [type, setType] = useState("half");
   const finalPrice = {
     half: menudata[0].price[0],
-    full: menudata[0].price[1]
+    full: menudata[0].price[1] || null
+    // half: 344,
+    // full: 455
   }
 
 
@@ -47,7 +54,11 @@ function Index({ width, height, id }) {
     setItemCount(itemCount + 1);
   }
   const decrementItem = () => {
-    if (itemCount > 0) setItemCount(itemCount - 1);
+    
+    if (itemCount > 0) {
+      setPrevCount(itemCount)
+      setItemCount(itemCount - 1)
+    };
   }
   const priceTypeHandler = (e) => {
     setPriceTypeDeatil(!priceTypeDeatil);
@@ -62,19 +73,18 @@ function Index({ width, height, id }) {
       const data = {
         ...selectedItem,
         priceType: type,
-        itemCount
+        itemCount,
+        selectedPricePoint: finalPrice[type]
       }
-
       dispatch(addItemToCart(data));
     }
-    if (prevCountRef.current === 1) {
+  }, [type, itemCount]);
+
+  useEffect(()=>{
+    if(prevCount === 1){
       dispatch(removeItemFromCart(id));
     }
-  }, [type, itemCount, selectedItem, dispatch, id]);
-
-  useEffect(() => {
-    prevCountRef.current = itemCount;
-  }, [itemCount]);
+  },[prevCount, dispatch, id])
 
   return (
     <ItemPriceWrapper
@@ -119,7 +129,7 @@ function Index({ width, height, id }) {
             <Minus />
           </IncDecBox>
           <IncDecBox>
-            <Qunatity ref={prevCountRef}>{itemCount}</Qunatity>
+            <Qunatity>{itemCount}</Qunatity>
           </IncDecBox>
           <IncDecBox onClick={incremntItem}>
             <Plus />

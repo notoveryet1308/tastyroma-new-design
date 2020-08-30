@@ -1,80 +1,58 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
 
 import { useSelector } from 'react-redux';
 import SideMenu from '../../components/sideNavlist';
 import ScrollToTop from '../../components/ScrollToTop';
 
-import CardCardWrapper from '../../components/cartCard';
+import Cart from '../../components/cartCard';
 import BackBtn from '../../components/common/Backbtn';
 import SandwichBar from '../../components/common/SandwichBar';
 import HighlightBox from '../../components/common/Highlightbox';
 import cartImg from '../../img/cart-img.jpg';
 
+import { ReactComponent as Cross } from '../../img/svg/Cross.svg';
+import {ReactComponent as Rupees } from '../../img/svg/Rupees.svg';
 
-const CartWrapper = styled.div`
-  width: 100%;
-  position: relative;
-`
-export const TopSection = styled.div`
-  position: relative;
-  width:100%;
-  height: 55vh;
-  background-image: url(${props => props.img});
-  background-position: center;
-  background-size: cover;
+import {
+  CartItems,
+  CartWrapper,
+  CloseDeleteAlert,
+  CoverHead,
+  TopSection,
+  Banner,
+  AlertInfo,
+  DeleteAlertBox,
+  NoCartItem,
+  PaymentBox,
+  PaymentButton
+} from './style';
 
-  @media (max-width:768px){
-    height: 45vh;
-  }
 
-`
-export const CoverHead = styled.header`
-  position: relative;
-  padding-top: 3rem;
-  width:90%;
-  margin: 0 auto;
-  height: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 12;
-`
-export const Banner = styled.div`
-  width: 100%;
-  height: 10rem;
-  position: absolute;
-  left:0;
-  top:50%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background:#fff; */
-  opacity:.9;  
-  @media (max-width: 500px){
-    height: 8rem;
-  }
-`
-
-const CartItems = styled.div`
-  width: 80%;
-  margin: 0 auto;
-  padding: 4rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-   @media (max-width: 1125px){
-     width: 85%;
-   }
-   @media (max-width: 768px){
-     width: 90%;
-   }
-`
 
 function Index() {
   const open = useSelector(st => st.sideMenuReducer.open);
+  const cartItems = useSelector(st => st.cartReducer.cartItems);
+  const totalpriceOfCart = totalCartPrice(cartItems);
+  const [isDel, setDel] = useState(false);
+  
+  const handleDeletionRender = (value) => {
+    setDel(true)
+  }
+  
+  const rerenderHandler = ()=>{
+
+  }
+  const CloseDelInfoHandler = () => {
+    setDel(false);
+  }
+
+  useEffect(() => {
+    if (isDel) {
+      setTimeout(() => {
+        setDel(false);
+      }, 5000)
+    }
+  }, [isDel])
 
   return (
     <CartWrapper>
@@ -95,15 +73,49 @@ function Index() {
           <HighlightBox width="80%" height="100%" text="YOUR CART" />
         </Banner>
       </TopSection>
-      <CartItems>
-        <CardCardWrapper />
-        <CardCardWrapper />
-        <CardCardWrapper />
-        <CardCardWrapper />
 
+      <DeleteAlertBox
+        height={isDel ? "3.5rem" : ".5rem"}
+        opacity={isDel ? "1" : "0"}
+      >
+        <AlertInfo>REMOVED</AlertInfo>
+        <CloseDeleteAlert onClick={CloseDelInfoHandler}>
+          <Cross />
+        </CloseDeleteAlert>
+      </DeleteAlertBox>
+
+      <CartItems>
+        {cartItems.map(cart => <Cart {...cart}
+          handleDeletionRender={handleDeletionRender} />)}
+        {
+          cartItems.length === 0 &&
+          <NoCartItem>
+            empty &nbsp; cart !!
+           </NoCartItem>
+        }
       </CartItems>
+      {
+        cartItems.length !== 0 &&
+        <PaymentBox>
+          <PaymentButton>
+            PAY &nbsp; {totalpriceOfCart}<Rupees/>
+        </PaymentButton>
+        </PaymentBox>
+      }
     </CartWrapper>
   )
 }
 
-export default Index
+export default Index;
+
+const totalCartPrice = (cart)=>{
+  let price = 0;
+  for(let i = 0; i< cart.length; i++){
+   
+    let item = cart[i].itemCount;
+    let selprice = cart[i].selectedPricePoint;
+    price = price +  (item * selprice);
+  }
+
+  return price;
+}

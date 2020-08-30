@@ -258,7 +258,14 @@ function Index() {
           <AddCommmentBtn>Add Comment </AddCommmentBtn>
         </MenuInfo>
         <AddToCart>
-          {itemDetail && <ItemToPrice width="30rem" height="10rem" price={itemDetail["price"]} />}
+          {itemDetail &&
+            <ItemToPrice
+              width="30rem"
+              height="10rem"
+              id={itemDetail.id}
+              name={itemDetail.name}
+            />
+          }
         </AddToCart>
       </ContentSection>
     </MenuDetailWrapper>

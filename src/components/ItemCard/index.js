@@ -44,6 +44,7 @@ function Index({ menulist, name, price, rating, type, history,id }) {
         display={openToCart ? "block" : "none"} 
         goback={handleOpen} 
         id={id}
+        name={name}
       />
 
 

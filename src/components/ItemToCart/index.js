@@ -5,7 +5,7 @@ import ItemPrice from '../ItemPrice';
 import { ItemToCart, SvgBack } from './style'
 
 
-function Index({goback, display, id }) {
+function Index({goback, display, id, name }) {
   return (
     <ItemToCart display={display}>
       <SvgBack onClick={goback}>
@@ -15,6 +15,7 @@ function Index({goback, display, id }) {
         width="100%"
         height="13rem"
         id={id}
+        name={name}
       />
     </ItemToCart>
   )
