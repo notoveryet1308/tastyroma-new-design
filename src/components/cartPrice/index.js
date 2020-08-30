@@ -23,7 +23,7 @@ import {
 
 } from './style';
 
-function Index({ id }) {
+function Index({ id, rerenderHandler }) {
 
   const cartItems = useSelector(st => st.cartReducer.cartItems);
   const cartData = cartItems.filter(data => data.id === id);
@@ -75,6 +75,7 @@ function Index({ id }) {
       }
 
       dispatch(addItemToCart(data));
+      rerenderHandler();
     }
 
   }, [type, count]);

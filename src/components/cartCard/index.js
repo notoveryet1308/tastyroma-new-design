@@ -22,7 +22,8 @@ function Index({
   name,
   itemCount,
   selectedPricePoint,
-  handleDeletionRender
+  handleDeletionRender,
+  rerenderHandler
 }) {
   const dispatch = useDispatch();
   const modName = name.toLowerCase().split(" ").join("");
@@ -34,7 +35,7 @@ function Index({
         <NameBox>
           <Name>{name}</Name>
         </NameBox>
-        <CartPrice id={id} />
+        <CartPrice id={id} rerenderHandler={rerenderHandler} />
       </CartInfo>
       <DelButton onClick={() => {
         dispatch(dispatch(removeItemFromCart(id)));

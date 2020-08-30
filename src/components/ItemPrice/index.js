@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { ReactComponent as Caret } from '../../img/svg/Caret.svg';
@@ -44,9 +45,7 @@ function Index({ width, height, id, name }) {
   const [type, setType] = useState("half");
   const finalPrice = {
     half: menudata[0].price[0],
-    full: menudata[0].price[1] || null
-    // half: 344,
-    // full: 455
+    full: menudata[0].price[1]
   }
 
 

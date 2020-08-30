@@ -34,13 +34,13 @@ function Index() {
   const cartItems = useSelector(st => st.cartReducer.cartItems);
   const totalpriceOfCart = totalCartPrice(cartItems);
   const [isDel, setDel] = useState(false);
-  
+  const [rerender, setRerender] = useState(false);
   const handleDeletionRender = (value) => {
     setDel(true)
   }
   
   const rerenderHandler = ()=>{
-
+     setRerender(!rerender);
   }
   const CloseDelInfoHandler = () => {
     setDel(false);
@@ -86,7 +86,8 @@ function Index() {
 
       <CartItems>
         {cartItems.map(cart => <Cart {...cart}
-          handleDeletionRender={handleDeletionRender} />)}
+          handleDeletionRender={handleDeletionRender}
+          rerenderHandler={rerenderHandler} />)}
         {
           cartItems.length === 0 &&
           <NoCartItem>
