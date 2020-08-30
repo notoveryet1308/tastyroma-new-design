@@ -8,7 +8,7 @@ function index() {
   return (
     <BookedWrapper>
       <Booked />
-      <BookedInfo>See at table</BookedInfo>
+      <BookedInfo>See you at table</BookedInfo>
     </BookedWrapper>
   )
 }
