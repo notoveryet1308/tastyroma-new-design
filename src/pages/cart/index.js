@@ -12,6 +12,8 @@ import cartImg from '../../img/cart-img.jpg';
 
 import { ReactComponent as Cross } from '../../img/svg/Cross.svg';
 import {ReactComponent as Rupees } from '../../img/svg/Rupees.svg';
+import {ReactComponent as Empty } from '../../img/svg/Empty.svg';
+
 
 import {
   CartItems,
@@ -91,7 +93,8 @@ function Index() {
         {
           cartItems.length === 0 &&
           <NoCartItem>
-            empty &nbsp; cart !!
+             <Empty/>
+             <span className="text">Nothing here !!</span>
            </NoCartItem>
         }
       </CartItems>

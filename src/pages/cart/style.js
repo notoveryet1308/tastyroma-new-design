@@ -105,9 +105,12 @@ export const NoCartItem = styled.div`
    justify-content: center;
    flex-direction: column;
    align-items: center;
-   color: #6A6767;
-   font-size: 5rem;
-   text-transform: uppercase;
+   
+   .text{
+    color: #6A6767;
+    font-size: 3rem;
+    text-transform: uppercase;
+   }
 `
 export const PaymentBox = styled.div`
   
