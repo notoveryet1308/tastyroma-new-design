@@ -89,9 +89,5 @@ export const navlinks = [{
   {
     name: "Cart",
     to: "/cart"
-  },
-  {
-    name: "Fav",
-    to: "/fav"
   }
 ]
